@@ -10,18 +10,12 @@
       </div>
 
       <div class="products-lab-desc">
-        <!-- <div>Since 2014, we have invested in a series of research and development activities. </div>
-        <div>Our research studies cover nutrient relationships with aging, weight control, vision protection, </div>
-        <div>gut health, metabolism, heart and cardiovascular health, and more.</div>
-        <div>In 2023, our nutrition lab in Vancouver joined the American National Laboratory Alliance to </div>
-        <div>expand our R&D categories and scope of work.</div> -->
         <div class="products-lab-desc-pc">Since 2014, we've invested in a series of research and development activities, 
         <br />including studies covering nutrient relationships with aging, weight control, vision protection, gut health, metabolism, heart and cardiovascular health, and more.</div>
 
         <div class="products-lab-desc-m">Since 2014, we've invested in a series of research and development activities, 
         including studies covering nutrient relationships with aging, weight control, vision protection, gut health, metabolism, heart and cardiovascular health, and more.</div>
       
-
       </div>
 
       <div class="products-more" @click="jumpTo('Laboratory')">Learn more</div>
@@ -188,7 +182,70 @@ export default {
   }
 }
 }
-@media only screen and (max-width: 860px) {
-
+@media only screen and (max-width: 900px) {
+.common-nutrition-lab {
+  .common-titles {
+    font-size: 20px;
+  }
+  .products-lab-lists {
+    height: max-content;
+    background: url('./../assets/images/lab-bg.png') center no-repeat;
+    background-size: 100% 100%;
+    padding: 10px 16px;
+    &>div {
+      width: 50%;
+      padding-left: 0px;
+      &:nth-child(2n) {
+        justify-content: flex-end;
+        .laboratory-studies-right {
+          width: 92px;
+        }
+      }
+    }
+    .laboratory-studies-left {
+      padding-right: 5px;
+      img {
+        width: 40px;
+      }
+    }
+    .laboratory-studies-right {
+      width: 100px;
+      p {
+        line-height: 1.2;
+        font-size: 12px;
+      }
+    }
+  }
+  .products-lab-desc {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    .products-lab-desc-pc {
+      display: none;
+    }
+    .products-lab-desc-m {
+      display: block;
+    }
+  }
+  .products-more {
+    font-size: 20px;
+    padding-bottom: 10px;
+    &::after {
+      width: 10px;
+      height: 10px;
+      margin: 0 0 2px 5px;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+    }
+    &:hover {
+      color: #000;
+      transform: unset;
+      &::after {
+        border-top: 2px solid #000;
+        border-right: 2px solid #000;
+      }
+    }
+  }
+}
 }
 </style>

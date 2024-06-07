@@ -83,65 +83,90 @@
           </div>
         </div>
       </div>
-      <div class="view-all-wrap" :class="{'animate__animated animate__zoomIn animate__delay-3s': isSellersShow}" style="padding: 60px 0;">
+      <div class="view-all-wrap all-products-view" :class="{'animate__animated animate__zoomIn animate__delay-3s': isSellersShow}">
         <div class="view-all" @click="jumpTo('Products')">View All Products </div>
       </div>
     </div>
 
-    <div class="part-introduce" ref="IntroduceRef">
-    <!--  :class="{'animate__animated animate__zoomIn': isIntroduceShow}" -->
-      <div class="introduce-title" ref="NutritionLab">Mission Hill Foods Nutrition Lab</div>
-      <!--  :class="{'animate__animated animate__zoomIn animate__delay-1s': isIntroduceShow}" -->
-      <div class="introduce-subtitle">Vancouver, BC Canada</div>
-      <div class="introduce-wrap">
-      <!--  :class="{'animate__animated animate__zoomIn animate__delay-2s': isIntroduceShow}" -->
-        <div class="introduce-wrap-left">
-          <div class="introduce-wrap-text">
-            Since 2014, we've invested in a series of research and development activities, including studies covering nutrient relationships with aging, weight control, vision protection, gut health, metabolism, heart and cardiovascular health, and more.
-            <!-- Since 2014, we have invested in a series of
-            research and development activities.
-            <br />
-            <br />Our research studies cover nutrient relationships with aging, weight control, vision protection,
-            gut health, metabolism, heart and cardiovascular health, and more.
-            <br />
-            <br />In 2023, our nutrition lab in Vancouver joined the
-            American National Laboratory Alliance to expand
-            our R&D categories and scope of work. -->
+    <div class="part-introduce-pc">
+      <div class="part-introduce" ref="IntroduceRef">
+        <div class="introduce-title" ref="NutritionLab">Mission Hill Foods Nutrition Lab</div>
+        <div class="introduce-subtitle">Vancouver, BC Canada</div>
+        <div class="introduce-wrap">
+          <div class="introduce-wrap-left">
+            <div class="introduce-wrap-text">Since 2014, we've invested in a series of research and development activities, including studies covering nutrient relationships with aging, weight control, vision protection, gut health, metabolism, heart and cardiovascular health, and more.</div>
           </div>
-          
+          <div class="introduce-wrap-right">
+            <div class="introduce-video">
+              <video
+                src="@/assets/video/30s.mp4"
+                ref="video"
+                style="width:100%;"
+                controls
+                muted
+                autoplay
+                preload="metadata"
+                webkit-playsinline="true"
+                playsinline="true"
+                x-webkit-airplay="allow"
+                x5-video-player-type="h5"
+                x5-video-player-fullscreen="false"
+                x5-video-orientation="landscape"
+                >
+                抱歉，您的浏览器不支持内嵌视频!
+              </video>
+            </div>
+          </div>
         </div>
-        <!--  :class="{'animate__animated animate__zoomIn animate__delay-2s': isIntroduceShow}" -->
-        <div class="introduce-wrap-right">
-          <div class="introduce-video">
-            <video
-              src="@/assets/video/30s.mp4"
-              ref="video"
-              style="width:100%;"
-              controls
-              muted
-              autoplay
-              preload="metadata"
-              webkit-playsinline="true"
-              playsinline="true"
-              x-webkit-airplay="allow"
-              x5-video-player-type="h5"
-              x5-video-player-fullscreen="false"
-              x5-video-orientation="landscape"
-              >
-              抱歉，您的浏览器不支持内嵌视频!
-            </video>
+        <div class="introduce-wrap">
+          <div class="introduce-wrap-left">
+            <div class="introduce-wrap-more">
+              Learn more
+            </div>
+          </div>
+          <div class="introduce-wrap-right">
+            <div class="introduce-fullscreen" @click="goFullscreen">View full screen</div>
           </div>
         </div>
       </div>
-      <div class="introduce-wrap">
-        <div class="introduce-wrap-left">
-          <div class="introduce-wrap-more">
-            Learn more
+    </div>
+
+    <div class="part-introduce-m">
+      <div class="part-introduce" ref="IntroduceRef">
+        <div class="introduce-title" ref="NutritionLab">Mission Hill Foods Nutrition Lab</div>
+        <div class="introduce-subtitle">Vancouver, BC Canada</div>
+        <div class="introduce-wrap">
+          <div class="introduce-wrap-left">
+            <div class="introduce-wrap-text">Since 2014, we've invested in a series of research and development activities, including studies covering nutrient relationships with aging, weight control, vision protection, gut health, metabolism, heart and cardiovascular health, and more.</div>
           </div>
         </div>
-        <div class="introduce-wrap-right">
-          <div class="introduce-fullscreen" @click="goFullscreen">View full screen</div>
+        <div class="introduce-wrap introduce-wrap-view">
+          <div class="introduce-wrap-left">
+            <div class="introduce-wrap-more">
+              Learn more
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="introduce-video">
+        <video
+          src="@/assets/video/30s.mp4"
+          ref="video"
+          style="width:100%;"
+          controls
+          muted
+          autoplay
+          preload="metadata"
+          webkit-playsinline="true"
+          playsinline="true"
+          x-webkit-airplay="allow"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="false"
+          x5-video-orientation="landscape"
+          >
+          抱歉，您的浏览器不支持内嵌视频!
+        </video>
       </div>
     </div>
 
@@ -151,36 +176,31 @@
         Our manufacturing facilities, based in California, USA and British Columbia, Canada, 
         <br />include two manufacturing sites in: 
         <br />Richmond, BC, Canada and Chino, California, USA.
-        <!-- Our manufacturing facilities, based in California, USA and British Columbia, Canada,
-        <br />include two manutacturina sites
-        <br />we hold stock in: Richmond, BC, Canada and Chino, California, USA -->
       </div>
 
       <div class="manufacture-content">
         <div class="manufacture-swiper-content">
           <div class="manufacture-image">
-            <!-- <img src="@/assets/images/factory1.png" alt=""> -->
             <el-image :src="require('@/assets/images/factory1.png')" :preview-src-list="[require('@/assets/images/factory1.png'), require('@/assets/images/factory2.png')]"></el-image>
           </div>
           <div class="manufacture-name">California, USA</div>
         </div>
         <div class="manufacture-swiper-content">
           <div class="manufacture-image">
-            <!-- <img src="@/assets/images/factory2.png" alt=""> -->
             <el-image :src="require('@/assets/images/factory2.png')" :preview-src-list="[require('@/assets/images/factory1.png'), require('@/assets/images/factory2.png')]"></el-image>
           </div>
           <div class="manufacture-name">British Columbia, Canada</div>
         </div>
       </div>
 
-      <div class="view-all-wrap" style="padding:40px 0px 30px;">
+      <div class="view-all-wrap view-all-Manufacturing" style="">
         <div class="view-all" @click="jumpTo('Manufacturing')">View All </div>
       </div>
     
     </div>
-</div>
-    <Footer />
-    
+  </div>
+
+  <Footer />
 
   </div>
 </template>
@@ -200,7 +220,6 @@ export default {
       currentTab: '',
       observer: null,
 
-      // scroll-animate
       scrollT: '',
       stopscroll: '',
       currentScroll: 0,
@@ -224,19 +243,12 @@ export default {
   methods: {
     goFullscreen() {
       var video = this.$refs.video;
-  
-      // Check if fullscreen mode is supported
       if (video.requestFullscreen) {
-        // Use the native function to enter fullscreen
-        video.requestFullscreen().catch(err => {
-          console.error(err);
-        });
+        video.requestFullscreen().catch(() => {});
       } else if (video.mozRequestFullScreen) { /* Firefox */
         video.mozRequestFullScreen();
       } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-        video.webkitRequestFullscreen().catch(err => {
-          console.error(err);
-        });
+        video.webkitRequestFullscreen().catch(() => {});
       } else if (video.msRequestFullscreen) { /* IE/Edge */
         video.msRequestFullscreen();
       }
@@ -245,7 +257,6 @@ export default {
       if (name == 'Contact') {
         this.$nextTick(() => {
           let scrollEl = document.querySelector('.scroll-container');
-          console.log('scrollEl', scrollEl);
           if (scrollEl) window.scrollTo({ top: scrollEl.clientHeight, behavior: 'smooth' });
         });
       } else {
@@ -300,7 +311,6 @@ export default {
     top: 0;
     left: 0;
     z-index: 999;
-    // background-color: $greenText;
     padding-top: $headerNotice;
     .top-nav-notice {
       width:100%;
@@ -365,7 +375,6 @@ export default {
   height: 760px;
   .top-swiper {
     background: url(./../../assets/images/banner.png) no-repeat center;
-    // background: url(./../../assets/images/swiper1.jpg) no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -402,7 +411,6 @@ export default {
       flex-direction: row;
     }
     .el-carousel__indicator {
-      // background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -441,7 +449,6 @@ export default {
 }
 }
 .part-populars {
-  // width: 1000px;
   margin: auto;
   padding: 0 60px;
   box-sizing: border-box;
@@ -464,10 +471,6 @@ export default {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    // margin-right: 20px;
-    // &:nth-child(3n) {
-    //   margin-right: 0;
-    // }
     cursor: pointer;
     &:hover {
       .popular-wrap {
@@ -494,7 +497,6 @@ export default {
       position: absolute;
       left: 0;
       top: 0;
-      // width: 100%;
       height: 100%;
       transform: translate(-10px, 0);
       width: calc( 100% + 10px );
@@ -546,7 +548,6 @@ export default {
       transform: translate(-30px, 0);
     }
     .hpcglItemTextInner {
-      // width: 430px;
       max-width: calc(100% - 20px);
       font-size: 16px;
       line-height: 22px;
@@ -631,11 +632,6 @@ export default {
       transition: all 0.4s ease;
       font-weight: 500;
     }
-    // &:hover {
-      // .whole-popular-wrap {
-      //   transform: scale(1.2);
-      // }
-    // }
   }
 
 }
@@ -665,11 +661,8 @@ export default {
     width: 100%;
     .sellers-li-wrap {
       width: 25%;
-      // .sellers-lis {
         padding: 0 10px;
-        // width: 100%;
         .sellers-items {
-          // width: 310px;
           width: 100%;
           margin-right: 20px;
           padding: 20px;
@@ -697,19 +690,13 @@ export default {
           }
           .sellers-pics {
             width: 100%;
-            // height: 310px;
             overflow: hidden;
             position: relative;
             padding-top: 10px;
             &>img {
               width: 100%;
-              // height: 100%;
               height: auto;
               transition: all 0.3s ease;
-              // position: absolute;
-              // top: 50%;
-              // left: 50%;
-              // transform: translate(-50%, -50%);
             }
           }
           .sellers-titles {
@@ -731,7 +718,6 @@ export default {
             line-height: 20px;
             margin: 0 0 18px 0;
             transition: all 0.3s ease;
-            // padding: 0 20px;
             text-align: center;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -753,18 +739,24 @@ export default {
             color: #FFFFFF;
           }
         }
-      // }
     }
   }
+  .all-products-view {
+    padding: 60px 0;
+  }
+}
+.part-introduce-pc {
+  display: block;
+}
+.part-introduce-m {
+  display: none;
 }
 .part-introduce {
   background: url(./../../assets/images/lab.png) no-repeat center;
   background-size: 100% 100%;
   width: 100%;
-  // height: 100vh;
   height: max-content;
   color: #fff;
-  // min-height: 700px;
   padding-bottom: 80px;
   margin-top: 20px;
   .introduce-title {
@@ -863,9 +855,6 @@ export default {
   }
 }
 }
-@media only screen and (max-width: 900px) {
-
-}
 .part-Manufacture {
   padding-top: 90px;
   .manufacture-title {
@@ -912,6 +901,9 @@ export default {
     }
   }
 }
+.view-all-Manufacturing {
+  padding:40px 0px 30px;
+}
 @media only screen and (max-width: 1100px) {
 .part-Manufacture {
   .manufacture-title {
@@ -922,14 +914,246 @@ export default {
   }
 }
 }
+@media only screen and (max-width: 1200px) {
+
+  .part-sellers {
+  .sellers-lists {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .sellers-li-wrap {
+      width: 33.33%;
+    }
+  }
+}
+}
+
 @media only screen and (max-width: 900px) {
 .index-container{
+  padding-top: $headerHeightMobile;
+  overflow-x: hidden;
   .top-nav-m {
     display: block;
   }
   .top-nav {
     display: none;
   }
+  .part-swiper {
+    height: 500px;
+    .top-swiper {
+      .top-swiper-text {
+        bottom: 30px;
+        font-size: 20px;
+      }
+    }
+    .el-carousel, .el-carousel__container {
+      .el-carousel__indicator--horizontal {
+        padding: 12px 8px 8px;
+      }
+      .el-carousel__indicator {
+        .el-carousel__button {
+          width: 8px;
+          height: 8px;
+        }
+      }
+      .el-carousel__indicator.is-active button {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  .part-populars {
+    padding: 0 15px;
+    .popular-lis {
+      padding: 0 5px;
+      width: 50%;
+      height: 180px;
+      margin-bottom: 10px;
+    }
+    .popular-items {
+      &:hover {
+        pointer-events: none;
+        .popular-wrap {
+          transform: unset;
+        }
+        .popular-title {
+          opacity: 1;
+          transform: unset;
+        }
+        .popular-textwrap {
+          opacity: 1;
+          transform: unset;
+        }
+      }
+      .popular-wrap {
+        transform: translate(0, 0);
+        width: 100%;
+      }
+      .popular-title {
+        font-size: 18px;
+        line-height: 1.3;
+        left: 10px;
+        bottom: 6px;
+      }
+      .popular-textwrap {
+        display: none;
+      }
+    }
+    .whole-popular-lis {
+      padding: 0 5px;
+      height: 180px;
+      .whole-popular-centers {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    }
+
+  }
+
+
+  .part-sellers {
+    .sellers-lists {
+      padding: 0 20px;
+      flex-wrap: wrap;
+      .sellers-li-wrap {
+        width: 50%;
+        padding: 0;
+        .sellers-items {
+          margin: 0;
+          padding: 20px;
+          &:hover {
+            .sellers-pics {
+              &>img {
+                transform: unset;
+              }
+            }
+          }
+          .sellers-titles {
+            font-size: 20px;
+            line-height: 24px;
+            margin: 12px 0 8px 0;
+          }
+          .sellers-descs {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0 0 18px 0;
+          }
+          .sellers-btns {
+            height: 40px;
+          }
+        }
+      }
+    }
+    .all-products-view {
+      padding: 30px 0;
+    }
+  }
+
+
+
+  .part-introduce-pc {
+    display: none;
+  }
+  .part-introduce-m {
+    display: block;
+  }
+  .part-introduce {
+    background: url(./../../assets/images/lab.png) no-repeat center;
+    background-size: cover;
+    padding-bottom: 20px;
+    .introduce-title {
+      padding-top: 20px;
+      font-size: 24px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .introduce-subtitle {
+      font-size: 22px;
+      margin-top: 0px;
+    }
+    .introduce-wrap {
+      padding: 30px 20px 0;
+      display: flex;
+      width: 100%;
+      .introduce-wrap-left {
+        width: 100%;
+        padding-right: 0;
+        .introduce-wrap-text {
+          font-size: 16px;
+          line-height: 1.5;
+          text-align: center;
+        }
+        .introduce-wrap-more {
+          text-align: center;
+          font-size: 18px;
+          &:hover {
+            transform: unset;
+          }
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 0 1px 5px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+          }
+        }
+      }
+      .introduce-wrap-right {
+        display: none;
+      }
+    }
+    .introduce-wrap-view {
+      padding-top: 10px;
+    }
+  }
+
+
+  .part-Manufacture {
+    padding-top: 30px;
+    .manufacture-title {
+      font-size: 26px;
+    }
+    .manufacture-subtitle {
+      margin-top: 20px;
+      line-height: 1.4;
+      font-size: 16px;
+    }
+    .manufacture-content {
+      display: flex;
+      width: 100%;
+      padding: 20px 20px 0;
+      justify-content: space-between;
+      .manufacture-swiper-content {
+        width: calc( 50% - 5px );
+        .manufacture-image {
+          border-radius: 0px;
+          &>img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            &:hover {
+              transform: unset;
+            }
+
+          }
+        }
+        .manufacture-name {
+          font-size: 14px;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .view-all-Manufacturing {
+    padding:20px 0px 10px;
+  }
+
 }
 }
 </style>

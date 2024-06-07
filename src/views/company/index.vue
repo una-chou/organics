@@ -4,10 +4,9 @@
     <Header />
     
     <div class="company-center">
-      <div class="detail-page-title">
+      <div class="detail-page-title detail-page-title-pc">
         <div class="detail-page-title-left">
           <div>Science-Based Dietary Nutrition</div>
-          <!-- <div class="detail-page-second">Dietary Nutrition</div> -->
           <div class="detail-page-subtitle">
             <div>Founded in 2014, Mission Hill Foods Group focuses </div>
             <div>on dietary supplement manufacturing and wholesale.</div>
@@ -18,8 +17,20 @@
           <img src="@/assets/images/company-right2.png" alt="">
         </div>
       </div>
+      <div class="detail-page-title detail-page-title-m">
+        <div class="detail-page-title-left">
+          <div>Science-Based Dietary Nutrition</div>
+          <div class="detail-page-title-right">
+            <img src="@/assets/images/company-right1.png" alt="">
+            <img src="@/assets/images/company-right2.png" alt="">
+          </div>
+          <div class="detail-page-subtitle">
+            <div>Founded in 2014, Mission Hill Foods Group focuses </div>
+            <div>on dietary supplement manufacturing and wholesale.</div>
+          </div>
+        </div>
+      </div>
       <div class="company-video">
-        <!-- <img src="@/assets/images/banner.png" alt=""> -->
         <video
           src="@/assets/video/60s.mp4"
           ref="video"
@@ -39,7 +50,6 @@
         </video>
       </div>
       <div class="company-content">
-        <!-- <div>Our goal is to conduct ongoing research and development (R&D) studies in the field of human dietary nutrition based on requests from our clients and consumers and to utilize the knowledge gained from these studies in the manufacturing of end products.</div> -->
         <div>Our company is headquartered in California, USA, with offices also located in British Columbia, Canada, and New York, USA.</div>
       </div>
       <div class="company-images">
@@ -63,7 +73,6 @@
         </div>
       </div>
       <div class="company-content">
-        <!-- <div>Over the past decade, we have sold more than 12 million bottles across 15 different categories of dietary products to our clients and consumers in North America, Japan, China, and SEA markets.</div> -->
         <div>By 2023, we achieved an annual sales volume of 12 million bottles across 15 different categories of dietary products, serving clients and consumers in North America, Japan, China, and Southeast Asia markets.</div>
       </div>
       <div class="company-images">
@@ -92,7 +101,6 @@
           <div class="detail-page-title-left">
             <div style="color:#fff;font-weight: 500;">Mission Hill Foods</div>
             <div style="color:#fff;font-weight: 500;margin-top:-12px">Science-Based Dietary Nutrition</div>
-            <!-- <div style="color:#fff;font-weight: 500;margin-top:-12px">Dietary Nutrition</div> -->
           </div>
           <div class="detail-page-title-right">
             <img src="@/assets/images/icon-white1.png" alt="">
@@ -135,6 +143,12 @@ export default {
   width: 100%;
   .company-center {
     padding: 0 $padding;
+    .detail-page-title-pc {
+      display: flex;
+    }
+    .detail-page-title-m {
+      display: none;
+    }
   }
   .company-title {
     display: flex;
@@ -193,12 +207,6 @@ export default {
     font-size: 22px;
     line-height: 1.6;
   }
-  .company-single-content {
-    padding: 60px 0 40px;
-    color: #000;
-    font-size: 22px;
-    line-height: 1.6;
-  }
   .company-images {
     display: flex;
     justify-content: space-between;
@@ -239,22 +247,6 @@ export default {
   }
 }
 }
-// @media only screen and (max-width: 1100px) {
-// .company-container {
-//   .company-based {
-//     padding: 0 40px;
-//     .detail-page-title .detail-page-title-left {
-//         font-size: 36px;
-//     }
-//     .detail-page-title-right {
-//       img {
-//         width: 56px;
-//         height: auto;
-//       }
-//     }
-//   }
-// }
-// }
 @media only screen and (max-width: 1000px) {
 .company-container {
   .company-based {
@@ -272,6 +264,100 @@ export default {
 }
 }
 @media only screen and (max-width: 900px) {
-
+.company-container {
+  .company-center {
+    padding: 0 20px;
+    .detail-page-title-pc {
+      display: none;
+    }
+    .detail-page-title-m {
+      display: block;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .detail-page-title-left {
+        font-size: 22px;
+        .detail-page-subtitle {
+          font-size: 16px;
+        }
+      }
+      .detail-page-title-right {
+        margin-top: 6px;
+        &>img {
+          width: 60px;
+          height: auto;
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .company-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    .company-title-left {
+      &>div {
+        &:first-of-type {
+          font-size: 60px;
+          color: $greenText;
+        }
+        &:last-of-type {
+          font-size: 30px;
+          color: #000;
+          line-height: 2;
+        }
+      }
+    }
+    .company-title-right {
+      &>img {
+        height: 250px;
+      }
+    }
+  }
+  .company-based {
+    height: 180px;
+    width: 100%;
+    background: url('./../../assets/images/company-bg.png') center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 10px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .detail-page-title {
+      padding: 20px 0;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      .detail-page-title-left {
+        font-size: 20px;
+        text-align: center;
+        line-height: 2;
+        margin: 5px 0 0 !important;
+      }
+    }
+    .detail-page-title-right {
+      img {
+        width: 50px;
+      }
+    }
+  }
+  .company-content {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .company-images {
+    &>div {
+      &>img {
+        &:hover {
+          transform: unset;
+        }
+      }
+    }
+  }
+}
 }
 </style>

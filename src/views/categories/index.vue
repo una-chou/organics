@@ -3,7 +3,7 @@
     <div class="categories-container common-box">
       <Header />
       <div class="products-center">
-        <div class="detail-page-title">
+        <div class="detail-page-title detail-page-title-pc">
           <div class="detail-page-title-left">
             <div>15 Categories </div>
             <div class="detail-page-second">For People's Wellness</div>
@@ -135,25 +135,6 @@ export default {
 
       }
     }
-    .whole-popular-centers {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      text-align: center;
-      font-size: 26px;
-      line-height: 1.6;
-      width: 100%;
-      z-index: 2;
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease;
-    }
-    // &:hover {
-    //   .whole-popular-wrap {
-    //     transform: scale(1.2);
-    //   }
-    // }
   }
   .products-box-lists {
     display: flex;
@@ -179,6 +160,61 @@ export default {
         font-size: 24px;
         margin-bottom: 6px;
       }
+    }
+  }
+}
+}
+
+@media only screen and (max-width: 900px) {
+.categories-container {
+  width: 100%;
+  .products-center {
+    padding: 0 20px;
+    .detail-page-title {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .detail-page-title-left {
+        font-size: 22px;
+        line-height: 1.8;
+      }
+      .detail-page-title-right {
+        &>img {
+          width: 60px !important;
+          height: auto !important;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .whole-popular-lis {
+    height: 200px;
+    margin-bottom: 20px;
+    .whole-popular-items, .whole-popular-wrap {
+      justify-content: center;
+    }
+    .whole-popular-items-left {
+      padding: 0px 20px;
+      font-size: 16px;
+      &>p {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &>span {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 6; /* 显示的行数 */
+      }
+    }
+    .whole-popular-items-right {
+      display: none;
+    }
+  }
+  .products-box-lists {
+    padding-bottom: 20px;
+    &>div {
+      width: 50%;
     }
   }
 }

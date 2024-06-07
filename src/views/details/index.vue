@@ -10,29 +10,31 @@
           <img :src="productInfo.logo" alt="" style="position:absolute;height:100%;top:0;right:-51px">
         </div>
 
-        <div class="details-introduce">
-          <div class="details-introduce-swiper">
-            <swiper ref="swiperIntroduceRef" class="swiperIntroduce" :options="swiperIntroduceOption">
-              <swiper-slide v-for="(item,index) in productInfo.productSwipers" :key="index">
-                <div class="details-introduce-swiper-content">
-                  <!-- <img :src="item" alt=""> -->
-                  <el-image :src="item" :preview-src-list="productInfo.productSwipers"></el-image>
-                </div>
-              </swiper-slide>
-            </swiper>
-            <div class="swiper-intro-pagination" slot="pagination"></div>
+          <div class="details-introduce">
+            <div class="details-introduce-swiper">
+              <swiper ref="swiperIntroduceRef" class="swiperIntroduce" :options="swiperIntroduceOption">
+                <swiper-slide v-for="(item,index) in productInfo.productSwipers" :key="index">
+                  <div class="details-introduce-swiper-content">
+                    <el-image :src="item" :preview-src-list="productInfo.productSwipers"></el-image>
+                  </div>
+                </swiper-slide>
+              </swiper>
+              <div class="swiper-intro-pagination" slot="pagination"></div>
+            </div>
+            <div class="details-introduce-form">
+              <div v-for="(item,index) in productInfo.productDesc" :key="index"><label>{{item.name}}: </label><span>{{item.value}}</span></div>
+            </div>
           </div>
-          <div class="details-introduce-form">
-            <div v-for="(item,index) in productInfo.productDesc" :key="index"><label>{{item.name}}: </label><span>{{item.value}}</span></div>
-            <!-- <div><label>Flavor: </label><span>Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored Unflavored</span></div> -->
+          <div class="details-introduce-m">
+            <div class="details-introduce-form">
+              <div v-for="(item,index) in productInfo.productDesc" :key="index"><label>{{item.name}}: </label><span>{{item.value}}</span></div>
+            </div>
           </div>
-        </div>
 
-        <div class="products-details-swiper">
+        <div class="products-details-swiper products-details-swiper-pc">
           <swiper ref="swiperRef" class="swiper" :options="swiperOption">
             <swiper-slide v-for="(item,index) in productInfo.detailsSwipers" :key="index">
               <div class="products-details-swiper-content">
-                <!-- <img :src="item" alt=""> -->
                 <el-image :src="item" :preview-src-list="productInfo.detailsSwipers"></el-image>
               </div>
             </swiper-slide>
@@ -40,24 +42,55 @@
           <div class="swiper-pagination" slot="pagination"></div>
         </div>
 
-        <div class="products-names">
-          <div class="products-names-lines">
-            <div :class="{'active': productInfo.unique=='Glucosamine750'}" @click="gotoView('Glucosamine750')">Glucosamine 750 mg</div>
-            <div :class="{'active': productInfo.unique=='Ashwagandha'}" @click="gotoView('Ashwagandha')">Ashwagandha</div>
-            <div :class="{'active': productInfo.unique=='CoQ10'}" @click="gotoView('CoQ10')">Coenzyme Q10 (CoQ10) 300 mg</div>
-            <div :class="{'active': productInfo.unique=='Omega3'}" @click="gotoView('Omega3')">Omega-3 Fish Oil</div>
-            <div :class="{'active': productInfo.unique=='Lutein'}" @click="gotoView('Lutein')">Lutein 40 mg</div>
+        <div class="products-details-swiper products-details-swiper-m">
+          <swiper ref="swiperRef" class="swiper" :options="swiperOptionMobile">
+            <swiper-slide v-for="(item,index) in productInfo.detailsSwipers" :key="index">
+              <div class="products-details-swiper-content">
+                <el-image :src="item" :preview-src-list="productInfo.detailsSwipers"></el-image>
+              </div>
+            </swiper-slide>
+          </swiper>
+          <div class="swiper-pagination-mobile" slot="pagination"></div>
+        </div>
+
+        <div class="products-names-m">
+          <div class="products-names">
+            <div class="products-names-lines">
+              <div :class="{'active': productInfo.unique=='Glucosamine750'}" @click="gotoView('Glucosamine750')">Glucosamine 750 mg</div>
+              <div :class="{'active': productInfo.unique=='Ashwagandha'}" @click="gotoView('Ashwagandha')">Ashwagandha</div>
+              <div :class="{'active': productInfo.unique=='CoQ10'}" @click="gotoView('CoQ10')">Coenzyme Q10 (CoQ10) 300 mg</div>
+              <div :class="{'active': productInfo.unique=='Omega3'}" @click="gotoView('Omega3')">Omega-3 Fish Oil</div>
+              <div :class="{'active': productInfo.unique=='Lutein'}" @click="gotoView('Lutein')">Lutein 40 mg</div>
+              <div :class="{'active': productInfo.unique=='Probiotic'}" @click="gotoView('Probiotic')">Probiotic</div>
+              <div :class="{'active': productInfo.unique=='Evening'}" @click="gotoView('Evening')">Evening Primrose Oil</div>
+              <div :class="{'active': productInfo.unique=='Vitamin'}" @click="gotoView('Vitamin')">Vitamin D3 5000 IU with Vitamin K2 100 mcg</div>
+              <div :class="{'active': productInfo.unique=='Vision'}" @click="gotoView('Vision')">Vision Protection Complex</div>
+              <div :class="{'active': productInfo.unique=='Ubiquinol100'}" @click="gotoView('Ubiquinol100')">Coenzyme Q10 (CoQ10) 100 mg with Bioperine<span style="font-size:10px;position:absolute;top:0">®</span></div>
+              <div :class="{'active': productInfo.unique=='Active'}" @click="gotoView('Active')">Coenzyme Q10 (CoQ10) 100 mg</div>
+              <div :class="{'active': productInfo.unique=='Glucosamine500'}" @click="gotoView('Glucosamine500')">Glucosamine 500 mg</div>
+            </div>
           </div>
-          <div class="products-names-lines">
-            <div :class="{'active': productInfo.unique=='Probiotic'}" @click="gotoView('Probiotic')">Probiotic</div>
-            <div :class="{'active': productInfo.unique=='Evening'}" @click="gotoView('Evening')">Evening Primrose Oil</div>
-            <div :class="{'active': productInfo.unique=='Vitamin'}" @click="gotoView('Vitamin')">Vitamin D3 5000 IU with Vitamin K2 100 mcg</div>
-            <div :class="{'active': productInfo.unique=='Vision'}" @click="gotoView('Vision')">Vision Protection Complex</div>
-          </div>
-          <div class="products-names-lines">
-            <div :class="{'active': productInfo.unique=='Ubiquinol100'}" @click="gotoView('Ubiquinol100')">Coenzyme Q10 (CoQ10) 100 mg with Bioperine<span style="font-size:10px;position:absolute;top:0">®</span></div>
-            <div :class="{'active': productInfo.unique=='Active'}" @click="gotoView('Active')">Coenzyme Q10 (CoQ10) 100 mg</div>
-            <div :class="{'active': productInfo.unique=='Glucosamine500'}" @click="gotoView('Glucosamine500')">Glucosamine 500 mg</div>
+        </div>
+        <div class="products-names-pc">
+          <div class="products-names">
+            <div class="products-names-lines">
+              <div :class="{'active': productInfo.unique=='Glucosamine750'}" @click="gotoView('Glucosamine750')">Glucosamine 750 mg</div>
+              <div :class="{'active': productInfo.unique=='Ashwagandha'}" @click="gotoView('Ashwagandha')">Ashwagandha</div>
+              <div :class="{'active': productInfo.unique=='CoQ10'}" @click="gotoView('CoQ10')">Coenzyme Q10 (CoQ10) 300 mg</div>
+              <div :class="{'active': productInfo.unique=='Omega3'}" @click="gotoView('Omega3')">Omega-3 Fish Oil</div>
+              <div :class="{'active': productInfo.unique=='Lutein'}" @click="gotoView('Lutein')">Lutein 40 mg</div>
+            </div>
+            <div class="products-names-lines">
+              <div :class="{'active': productInfo.unique=='Probiotic'}" @click="gotoView('Probiotic')">Probiotic</div>
+              <div :class="{'active': productInfo.unique=='Evening'}" @click="gotoView('Evening')">Evening Primrose Oil</div>
+              <div :class="{'active': productInfo.unique=='Vitamin'}" @click="gotoView('Vitamin')">Vitamin D3 5000 IU with Vitamin K2 100 mcg</div>
+              <div :class="{'active': productInfo.unique=='Vision'}" @click="gotoView('Vision')">Vision Protection Complex</div>
+            </div>
+            <div class="products-names-lines">
+              <div :class="{'active': productInfo.unique=='Ubiquinol100'}" @click="gotoView('Ubiquinol100')">Coenzyme Q10 (CoQ10) 100 mg with Bioperine<span style="font-size:10px;position:absolute;top:0">®</span></div>
+              <div :class="{'active': productInfo.unique=='Active'}" @click="gotoView('Active')">Coenzyme Q10 (CoQ10) 100 mg</div>
+              <div :class="{'active': productInfo.unique=='Glucosamine500'}" @click="gotoView('Glucosamine500')">Glucosamine 500 mg</div>
+            </div>
           </div>
         </div>
 
@@ -108,6 +141,15 @@ export default {
         spaceBetween: 20,
         pagination: {
           el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: false,
+      },
+      swiperOptionMobile: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination-mobile',
           clickable: true
         },
         navigation: false,
@@ -163,6 +205,12 @@ export default {
   width: 100%;
   .products-center {
     padding: 0 $padding;
+  }
+  .details-introduce-pc {
+    display: block;
+  }
+  .details-introduce-m {
+    display: none;
   }
   .details-introduce {
     background-color: #EFEFEF;
@@ -237,6 +285,12 @@ export default {
       }
     }
   }
+  .products-details-swiper-pc {
+    display: block;
+  }
+  .products-details-swiper-m {
+    display: none;
+  }
   .products-details-swiper {
     position: relative;
     .products-details-swiper-content {
@@ -268,6 +322,12 @@ export default {
         height: 12px;
       }
     }
+  }
+  .products-names-pc {
+    display: block;
+  }
+  .products-names-m {
+    display: none;
   }
   .products-names {
     margin-top: 100px;
@@ -365,6 +425,21 @@ export default {
     }
   }
 }
+.details-container {
+
+  .products-details-swiper {
+    position: relative;
+    .products-details-swiper-content {
+      height: 220px;
+    }
+    .swiper-pagination {
+      bottom: -30px;
+    }
+  }
+  .products-names {
+    margin-top: 80px;
+  }
+}
 }
 
 @media only screen and (max-width: 1100px) {
@@ -373,6 +448,18 @@ export default {
     .products-names-lines {
       font-size: 18px;
     }
+  }
+  .products-details-swiper {
+    position: relative;
+    .products-details-swiper-content {
+      height: 200px;
+    }
+    .swiper-pagination {
+      bottom: -20px;
+    }
+  }
+  .products-names {
+    margin-top: 60px;
   }
 }
 }
@@ -384,6 +471,18 @@ export default {
       font-size: 16px;
     }
   }
+  .products-details-swiper {
+    position: relative;
+    .products-details-swiper-content {
+      height: 180px;
+    }
+    .swiper-pagination {
+      bottom: -20px;
+    }
+  }
+  .products-names {
+    margin-top: 40px;
+  }
 }
 }
 
@@ -393,6 +492,218 @@ export default {
     .products-names-lines {
       font-size: 14px;
     }
+  }
+}
+}
+
+@media only screen and (max-width: 900px) {
+.details-container {
+  width: 100%;
+  overflow-x: hidden;
+  .products-center {
+    padding: 0 20px;
+    .detail-page-title {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .detail-page-title-left {
+        font-size: 22px;
+        line-height: 1.8;
+      }
+      &>img {
+        right: -27px !important;
+      }
+    }
+  }
+
+  .details-introduce-pc {
+    display: none;
+  }
+  .details-introduce-m {
+    display: block;
+    .details-introduce-form {
+      // width: 60%;
+      flex: auto;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 0px 20px 0px;
+      font-size: 16px;
+      &>div {
+        margin-bottom: 10px;
+        &:last-of-type {
+          margin: 0;
+        }
+        &>label {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .details-introduce {
+    background-color: #EFEFEF;
+    height: 335px;
+    min-height: 335px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    .details-introduce-swiper {
+      // width: 40%;
+      flex-shrink: 0;
+      position: relative;
+      height: 100%;
+      // padding: 20px;
+      height: 335px;
+      width: 100%;
+      .swiper-container {
+        height: 100%;
+      }
+      .details-introduce-swiper-content {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        .el-image {
+          height: 100%;
+        }
+        &>img {
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .swiper-intro-pagination {
+        bottom: 10px;
+        position: absolute;
+        text-align: center;
+        transition: 300ms opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .swiper-pagination-bullet {
+          margin: 0 4px;
+          width: 6px;
+          height: 6px;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: $greenText;
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+    .details-introduce-form {
+      display: none;
+    }
+  }
+
+  .products-details-swiper-pc {
+    display: none;
+  }
+  .products-details-swiper-m {
+    display: block;
+    .products-details-swiper-content {
+      height: 280px;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      .el-image {
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        &>img {
+          width: auto;
+          height: 100%;
+        }
+      }
+      &>img {
+        // width: 100%;
+        height: 100%;
+      }
+    }
+    .swiper-pagination-mobile {
+      bottom: -20px;
+      position: absolute;
+      text-align: center;
+      transition: 300ms opacity;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .swiper-pagination-bullet {
+        margin: 0 8px;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $greenText;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  
+  .products-names-pc {
+    display: none;
+  }
+  .products-names-m {
+    display: block;
+  }
+  
+  .products-names {
+    margin-top: 40px;
+    .products-names-lines {
+      flex-direction: column;
+      font-size: 14px;
+      &>div {
+        flex-shrink: 0;
+        margin-top: 10px;
+        &:hover {
+          opacity: 1;
+        }
+        &::before {
+          display: none;
+        }
+        &:last-of-type {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .common-titles {
+    font-size: 22px;
+  }
+  .details-view-all {
+      padding-top: 30px;
+      .view-all {
+        font-size: 22px;
+        &::after {
+          width: 10px;
+          height: 10px;
+          margin: 0 0 2px 5px;
+          border-top: 2px solid #BDBEBE;
+          border-right: 2px solid #BDBEBE;
+        }
+        &:hover {
+          color: #BDBEBE;
+          &::after {
+            border-top: 2px solid #BDBEBE;
+            border-right: 2px solid #BDBEBE;
+          }
+        }
+      }
   }
 }
 }

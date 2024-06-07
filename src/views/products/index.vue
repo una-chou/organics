@@ -148,9 +148,63 @@ export default {
       font-size: 28px;
     }
   }
+  .products-box-lists {
+    &>div {
+      width: 33.33%;
+    }
+  }
 }
 }
 @media only screen and (max-width: 900px) {
-
+.products-container {
+  width: 100%;
+  .products-center {
+    padding: 0 20px;
+    .detail-page-title {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px 0;
+      .detail-page-title-left {
+        font-size: 22px;
+        line-height: 1.8;
+      }
+      .detail-page-title-right {
+        margin-top: 10px;
+        &>img {
+          width: 60px;
+          height: auto;
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .detail-page-title-right {
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  .whole-popular-lis {
+    height: 180px;
+    .whole-popular-centers {
+      padding: 0;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    &:hover {
+      .whole-popular-wrap {
+        transform: unset;
+      }
+    }
+  }
+  .products-box-lists {
+    padding-top: 20px;
+    &>div {
+      width: 50%;
+    }
+  }
+}
 }
 </style>

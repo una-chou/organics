@@ -1,12 +1,12 @@
 <template>
   <div class="SELLERS">
-    <div class="common-titles" style="padding-top: 85px;padding-bottom: 45px;">BEST SELLERS</div>
+    <div class="common-titles sellers-common-titles" style="">BEST SELLERS</div>
     <div class="sellers-lists">
       <div class="sellers-li-wrap" v-for="(item, index) in SellerLists.slice(0,4)" :key="index">
         <ProductItem :item="item" />
       </div>
     </div>
-    <div class="view-all-wrap" style="padding:50px 0 20px;">
+    <div class="view-all-wrap view-all-sellers" style="">
       <div class="view-all" @click="jumpTo('Products')">View All Products </div>
     </div>
   </div>
@@ -43,5 +43,45 @@ export default {
       width: 25%;
     }
   }
+  .sellers-common-titles {
+    padding-top: 85px;
+    padding-bottom: 45px;
+  }
+  .view-all-sellers {
+    padding:50px 0 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+.SELLERS {
+  .sellers-lists {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .sellers-li-wrap {
+      width: 33.33%;
+    }
+  }
+}
+}
+@media only screen and (max-width: 900px) {
+.SELLERS {
+  .sellers-common-titles {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  .view-all-sellers {
+    padding:25px 0 20px;
+  }
+  .sellers-lists {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    .sellers-li-wrap {
+      width: 50%;
+    }
+  }
+}
 }
 </style>

@@ -130,4 +130,9 @@ $greenText: #006633;
     }
   }
 }
+@media only screen and (max-width: 900px) {
+  .SELLERSLIS {
+    padding: 0;
+  }
+}
 </style>

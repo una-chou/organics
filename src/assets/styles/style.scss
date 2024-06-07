@@ -68,6 +68,13 @@ ul, ol {
     max-width: $screenWidth;
     margin: auto;
 }
+
+@media only screen and (max-width: 900px) {
+    .common-box {
+        padding-top: $headerHeightMobile;
+        max-width: 100%;
+    }
+}
 .screenPadding {
     max-width: $screenWidth;
     margin: auto;
@@ -92,7 +99,11 @@ ul, ol {
     }
 }
 @media only screen and (max-width: 900px) {
-    
+    .common-titles {
+        font-size: 28px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
 }
 .view-all-wrap {
     // height: 100px;
@@ -130,6 +141,30 @@ ul, ol {
       }
     }
 }
+
+
+@media only screen and (max-width: 900px) {
+    .view-all-wrap {
+        .view-all {
+          font-size: 24px;
+          &::after {
+            width: 10px;
+            height: 10px;
+            margin: 0 0 2px 5px;
+            border-top: 2px solid $green;
+            border-right: 2px solid $green;
+          }
+          &:hover {
+            color: $green;
+            &::after {
+              border-top: 2px solid $green;
+              border-right: 2px solid $green;
+            }
+          }
+        }
+    }
+}
+
 .detail-page-title {
     padding: 45px 0 40px;
     width: 100%;

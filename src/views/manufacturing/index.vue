@@ -4,9 +4,12 @@
       <Header />
       <div class="manufacture-content-box-center">
         <div class="detail-page-title">
-          <div class="detail-page-title-left">
+          <div class="detail-page-title-left detail-page-title-left-pc">
             <div>Our Manufacturing </div>
             <div class="detail-page-second">Facilities</div>
+          </div>
+          <div class="detail-page-title-left detail-page-title-left-m">
+            <div>Our Manufacturing Facilities</div>
           </div>
           <div class="detail-page-title-right">
             <img src="@/assets/images/micon4.png" style="position: relative;top: -25px;">
@@ -20,45 +23,28 @@
             <el-carousel-item>
               <div class="top-swiper">
                 <img src="@/assets/images/manufacture1.png" alt="">
-                <!-- <el-image :src="require('@/assets/images/manufacture1.png')" :preview-src-list="[
-                  require('@/assets/images/manufacture1.png'),
-                  require('@/assets/images/manufacture2.jpg'),
-                  require('@/assets/images/manufacture3.jpg')
-                ]"></el-image> -->
               </div>
             </el-carousel-item>
             <el-carousel-item>
               <div class="top-swiper">
                 <img src="@/assets/images/manufacture2.jpg" alt="">
-                <!-- <el-image :src="require('@/assets/images/manufacture2.jpg')" :preview-src-list="[
-                  require('@/assets/images/manufacture1.png'),
-                  require('@/assets/images/manufacture2.jpg'),
-                  require('@/assets/images/manufacture3.jpg')
-                ]"></el-image> -->
               </div>
             </el-carousel-item>
             <el-carousel-item>
               <div class="top-swiper">
                 <img src="@/assets/images/manufacture3.jpg" alt="">
-                <!-- <el-image :src="require('@/assets/images/manufacture3.jpg')" :preview-src-list="[
-                  require('@/assets/images/manufacture1.png'),
-                  require('@/assets/images/manufacture2.jpg'),
-                  require('@/assets/images/manufacture3.jpg')
-                ]"></el-image> -->
               </div>
             </el-carousel-item>
           </el-carousel>
         </div>
 
         <div class="manufacture-introduce">
-          <!-- <div>Our manufacturing facilities, based in California, USA and British Columbia, Canada, include two manufacturing sites we hold stock in: Richmond, BC, Canada and Chino, California, USA.</div>
-          <div>We supply various dosage forms including softgel, capsule, tablet, powder (sachet and jar), pill, granule, oral liquid, drops, functional beverage (bottle and portable pouch), with over 200 kinds of formulas, and a daily production capacity of 900,000 bottles (boxes. sachets).</div> -->
           <div>Our manufacturing facilities include two sites in: Richmond, BC, Canada and Chino, California, USA.</div>
           <div>We supply various dosage forms including softgel, capsule, tablet, powder (sachet and jar), pill, granule, oral liquid, drops, functional beverage (bottle and portable pouch), with over 200 kinds of formulas, and a daily production capacity of 900,000 bottles (boxes. sachets).</div>
         </div>
 
 
-        <div class="MANUFACTURING">
+        <div class="MANUFACTURING MANUFACTURING-pc">
 
           <div class="manufacture-swiper">
             <div class="manufacture-swiper-container">
@@ -67,7 +53,6 @@
                   <div class="manufacture-swiper-content">
                     <div class="manufacture-image" :class="`manufacture-image${index+1}`">
                       <img :src="item.picture" alt="">
-                      <!-- <el-image :src="item.picture" :preview-src-list="LabLists.map(v=>v.picture)"></el-image> -->
                     </div>
                     <div class="manufacture-name">{{ item.name }}</div>
                   </div>
@@ -75,17 +60,39 @@
               </swiper>
               <div class="swiper-pagination" slot="pagination"></div>
               <div class="swiper-button-prev" slot="button-prev">
-                <!-- <i class="el-icon el-icon-arrow-left"></i> -->
                 <img src="./../../assets/images/swiper-arrow1.png" alt="">
               </div>
               <div class="swiper-button-next" slot="button-next">
-                <!-- <i class="el-icon el-icon-arrow-right"></i> -->
                 <img src="./../../assets/images/swiper-arrow2.png" alt="">
               </div>
             </div>
           </div>
         </div>
 
+        <div class="MANUFACTURING MANUFACTURING-m">
+
+          <div class="manufacture-swiper">
+            <div class="manufacture-swiper-container">
+              <swiper class="swiper" :options="swiperOptionMobile">
+                <swiper-slide v-for="(item,index) in LabLists" :key="index">
+                  <div class="manufacture-swiper-content">
+                    <div class="manufacture-image" style="height:100%;width:auto" :class="`manufacture-image${index+1}`">
+                      <img :src="item.picture" alt="">
+                    </div>
+                    <div class="manufacture-name">{{ item.name }}</div>
+                  </div>
+                </swiper-slide>
+              </swiper>
+              <div class="swiper-pagination" slot="pagination"></div>
+              <div class="swiper-button-prev" slot="button-prev">
+                <img src="./../../assets/images/swiper-arrow1.png" alt="">
+              </div>
+              <div class="swiper-button-next" slot="button-next">
+                <img src="./../../assets/images/swiper-arrow2.png" alt="">
+              </div>
+            </div>
+          </div>
+          </div>
 
         <div class="common-titles">OUR PRODUCTION CAPACITY</div>
 
@@ -96,26 +103,6 @@
               <p>{{item.name}}</p>
               <span>{{ item.desc }}</span>
             </div>
-            <!-- <div class="CAPACITY-items">
-              <img src="@/assets/images/mitem2.png" alt="">
-              <p>1 billion pieces</p>
-              <span>( Softgel )</span>
-            </div>
-            <div class="CAPACITY-items">
-              <img src="@/assets/images/mitem3.png" alt="">
-              <p>1 billion pieces</p>
-              <span>( Softgel )</span>
-            </div>
-            <div class="CAPACITY-items">
-              <img src="@/assets/images/mitem4.png" alt="">
-              <p>1 billion pieces</p>
-              <span>( Softgel )</span>
-            </div>
-            <div class="CAPACITY-items">
-              <img src="@/assets/images/mitem5.png" alt="">
-              <p>1 billion pieces</p>
-              <span>( Softgel )</span>
-            </div> -->
           </div>
         </div>
 
@@ -137,7 +124,6 @@
         </div>
       </div>
 
-      
       
 
       <div class="manufacture-content-box-center">
@@ -177,6 +163,19 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         }
+      },
+      swiperOptionMobile: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true
+        // },
+        pagination: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       }
     }
   },
@@ -200,6 +199,10 @@ export default {
     cursor: pointer;
     &>img {
       height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     .top-swiper-text {
       color: #fff;
@@ -255,11 +258,11 @@ export default {
   .manufacture-content-box-center {
 
     padding: 0 $padding;
-  }
-  .manufacture-video {
-    width: 100%;
-    img {
-      width: 100%;
+    .detail-page-title-left-pc {
+      display: block;
+    }
+    .detail-page-title-left-m {
+      display: none;
     }
   }
   .manufacture-introduce {
@@ -406,17 +409,6 @@ export default {
 }
 .MANUFACTURING {
   padding-top: 10px;
-  .manufacture-title {
-    text-align: center;
-    font-size: 50px;
-    color: $greenText;
-  }
-  .manufacture-subtitle {
-    margin-top: 20px;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 30px;
-  }
   .manufacture-swiper {
     // padding: 0 70px;
     // height: 400px;
@@ -506,14 +498,22 @@ export default {
         overflow: hidden;
         border-radius: 12px;
         &>img {
-          width: 100%;
-          // height:100%;
+          // width: 100%;
+          height:100%;
+          max-width: 100%;
+          max-height: 100%;
           transition: all 0.6s ease;
           transform: translate(-50%, -50%);
           position: absolute;
           top: 50%;
           left: 50%;
 
+        }
+      }
+      .manufacture-image4 {
+        &>img {
+          width:100%;
+          height: auto;
         }
       }
       .manufacture-image5 {
@@ -531,6 +531,12 @@ export default {
     }
   }
 }
+.MANUFACTURING-pc {
+  display: block;
+}
+.MANUFACTURING-m {
+  display: none;
+}
 
 
 @media only screen and (max-width: 1200px) {
@@ -547,7 +553,367 @@ export default {
 .manufacture-content-box {
   .CAPACITY-lists {
     .CAPACITY-items {
-      font-size: 24px;
+      font-size: 19px;
+    }
+  }
+  .manufacture-introduce {
+    padding-bottom: 30px
+  }
+  .MANUFACTURING {
+    padding-top: 10px;
+    .manufacture-swiper {
+      // padding: 0 70px;
+      // height: 400px;
+      overflow: hidden;
+      // margin-top: 50px;
+      // position: relative;
+      .manufacture-swiper-container {
+        width: 100%;
+        height: 300px;
+        position: relative; /* 确保相对定位的正确性 */
+        padding: 0 70px;
+
+        .swiper {
+          height: 100%;
+          width: 100%;
+          .swiper-slide {
+            // background-color: red;
+          }
+        }
+        .swiper-pagination {
+          bottom: -50px;
+          position: absolute;
+          text-align: center;
+          transition: 300ms opacity;
+          transform: translate3d(0, 0, 0);
+          z-index: 10;
+          left: 0;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .swiper-pagination-bullet {
+            margin: 0 8px;
+          }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+          position: absolute;
+          // top: 50%;
+          // transform: translateY(-50%);
+          top: 160px;
+          width: 30px;
+          height: 30px;
+          // color: $greenText;
+          // border-radius: 50%;
+          cursor: pointer;
+          z-index: 10;
+          // border: 2px solid $greenText;
+          // font-size: 26px;
+          // font-weight: 700;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          &::after {
+            content: '';
+          }
+          &:hover {
+            // color: #fff;
+            // background-color: $greenText;
+            opacity: .9;          
+          }
+        }
+        .swiper-button-prev {
+          left: 0px;
+        }
+        .swiper-button-next {
+          right: 0px;
+        }
+        .swiper-pagination-bullet {
+          background-color: #AAABAB;
+          opacity: 1;
+          width: 10px;
+          height: 10px;
+
+        }
+        .swiper-pagination-bullet-active {
+          background-color: $green;
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .manufacture-swiper-content {
+        .manufacture-image {
+          height: 260px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px;
+          &>img {
+            width: 100%;
+            // height:100%;
+            transition: all 0.6s ease;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+          }
+        }
+        .manufacture-image5 {
+          &>img {
+            height:100%;
+            width: auto;
+          }
+        }
+        .manufacture-name {
+          font-size: 18px;
+          color: #000;
+          padding-top: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+}
+
+@media only screen and (max-width: 900px) {
+.manufacture-video {
+  width: 100%;
+  height: 400px;
+  .el-carousel, .el-carousel__container {
+    height: 100%;
+    .el-carousel__indicator--horizontal {
+      padding: 12px 8px 10px;
+    }
+    .el-carousel__indicator {
+      .el-carousel__button {
+        width: 8px;
+        height: 8px;
+      }
+    }
+    .el-carousel__indicator.is-active button {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+.manufacture-content-box {
+  width: 100%;
+  .detail-page-title-right {
+    img {
+      height: auto;
+      margin-left: 25px;
+    }
+  }
+  .manufacture-content-box-center {
+    padding: 0 20px;
+    .detail-page-title-left-pc {
+      display: none;
+    }
+    .detail-page-title-left-m {
+      display: block;
+    }
+    .detail-page-title {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+    .detail-page-title-left {
+      font-size: 22px;
+      line-height: 1.8;
+    }
+    .detail-page-title-right {
+      margin-top: 10px;
+      &>img {
+        width: 50px !important;
+        height: auto;
+        margin-left: 0;
+        margin-right: 10px;
+        &:first-child {
+          top: -15px !important;
+        }
+      }
+    }
+  }
+  .manufacture-introduce {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px 0;
+  }
+  .CAPACITY-lists {
+    width: 100%;
+    margin-bottom: 10px;
+    .CAPACITY-items {
+      width: 50%;
+      font-size: 14px;
+      margin-bottom: 20px;
+      padding: 0 0px;
+      &>img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+  .provide-fda {
+    border-radius: 12px;
+    padding: 20px;
+    flex-direction: column;
+    .provide-fda-text {
+      padding-right: 0px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .provide-fda-image {
+      align-items: center;
+      margin-top: 20px;
+      img {
+        width: 60px;
+        margin-left: 0px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .common-titles {
+    padding: 20px 0;
+    margin: 0 !important;
+    font-size: 22px;
+  }
+  .quality-lists {
+    padding: 0 20px;
+    .quality-items {
+      padding: 0 20px;
+      &>img {
+        height: 50px;
+        padding: 10px 0;
+      }
+      &>div {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 20px 0;
+      }
+    }
+    .quality-items1 {
+      &::before {
+        bottom: -46px;
+      }
+      &::after {
+        height: calc( 100% + 0px );
+      }
+    }
+    .quality-items2 {
+      &::before {
+        bottom: -41.6px;
+      }
+      &::after {
+        top: 29px;
+      }
+    }
+  }
+}
+.MANUFACTURING-pc {
+  display: none;
+}
+.MANUFACTURING-m {
+  display: block;
+
+  .manufacture-swiper {
+    overflow: hidden;
+    .manufacture-swiper-container {
+      width: 100%;
+      height: 350px;
+      position: relative; /* 确保相对定位的正确性 */
+      padding: 0 30px;
+
+      .swiper {
+        height: 100%;
+        width: 100%;
+        .swiper-slide {
+          // background-color: red;
+        }
+      }
+      .swiper-pagination {
+        bottom: -50px;
+        position: absolute;
+        text-align: center;
+        transition: 300ms opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .swiper-pagination-bullet {
+          margin: 0 8px;
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        top: 160px;
+        width: 25px;
+        height: 25px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &::after {
+          content: '';
+        }
+        &:hover {
+          opacity: 1;          
+        }
+      }
+      .swiper-button-prev {
+        left: 0px;
+      }
+      .swiper-button-next {
+        right: 0px;
+      }
+      .swiper-pagination-bullet {
+        background-color: #AAABAB;
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $green;
+        width: 14px;
+        height: 14px;
+      }
+    }
+    .manufacture-swiper-content {
+      .manufacture-image {
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        &>img {
+          width: 100%;
+          transition: all 0.6s ease;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+        }
+      }
+      .manufacture-image5 {
+        &>img {
+          height:100%;
+          width: auto;
+        }
+      }
+      .manufacture-name {
+        font-size: 16px;
+        color: #000;
+        padding-top: 18px;
+        text-align: center;
+      }
     }
   }
 }

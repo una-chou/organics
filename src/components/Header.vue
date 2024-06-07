@@ -131,7 +131,7 @@ $greenText: #006633;
   }
 }
 .top-nav-whole {
-  display: block;
+  display: flex;
 }
 .top-nav-fold {
   display: none;
@@ -163,7 +163,7 @@ $greenText: #006633;
   align-items: center;
   .top-nav-notice {
     height:40px;
-    font-size: 16px;
+    font-size: 14px;
     line-height:40px;
   }
   .logo {
@@ -175,7 +175,7 @@ $greenText: #006633;
   }
   .three-line {
     display: flex;
-    width: 55px;
+    width: 24px;
     align-items: center;
     flex-direction: column;
     .line {
@@ -223,11 +223,10 @@ $greenText: #006633;
       justify-content: center;
       align-items: center;
       font-size: 16px;
-      font-weight: 600;
-      color: $green;
+      font-weight: 500;
+      color: #fff;
       line-height: 15px;
-      letter-spacing: 2px;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid rgba(255,255,255,.3);
       text-decoration: none;
     }
   }

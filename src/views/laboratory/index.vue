@@ -14,7 +14,6 @@
           </div>
         </div>
         <div class="laboratory-video">
-          <!-- <img src="@/assets/images/banner.png" alt=""> -->
           <video
             src="@/assets/video/30s.mp4"
             ref="video"
@@ -50,7 +49,6 @@
             ]"></el-image>
           </div>
         </div>
-        <!-- <div class="laboratory-descs" style="padding-bottom: 0;">In 2023, our lab joined the American National Laboratory Alliance to expand our R&D categories and scope of work.</div> -->
 
         <div class="laboratory-persons">
           <div class="common-titles">RESEARCH SCIENTIST TEAM</div>
@@ -371,6 +369,152 @@ export default {
         line-height: 1.2;
         font-size: 18px;
         text-transform: capitalize;
+      }
+    }
+  }
+}
+}
+
+
+@media only screen and (max-width: 900px) {
+.laboratory-container {
+  width: 100%;
+  .laboratory-center {
+    padding: 0 20px;
+    .detail-page-title {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+    .detail-page-title-left {
+      font-size: 22px;
+      line-height: 1.8;
+    }
+    .detail-page-title-right {
+      margin-top: 10px;
+      &>img {
+        height: 50px !important;
+        width: auto;
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+  .laboratory-descs {
+    font-size: 16px;
+    padding: 20px 0 20px;
+    line-height: 1.5;
+    margin-top: 0px;
+  }
+  .laboratory-images {
+    flex-wrap: wrap;
+    &>div {
+      margin-right: 0;
+      margin-bottom: 5px;
+      width: 50%;
+      padding-right: 5px;
+      &:nth-child(2n) {
+        width: 50%;
+        padding-right: 0px;
+        padding-left: 5px;
+      }
+      &>img {
+        &:hover {
+          transform: unset;
+        }
+      }
+    }
+  }
+  .laboratory-major {
+    height: 160px;
+    width: 100%;
+    background: url('./../../assets/images/major-bg.png') center no-repeat;
+    background-size: auto 100%;
+    padding: 0;
+    &>div {
+      &:first-child {
+        text-align: center;
+        font-size: 18px;
+      }
+      &:last-child {
+        font-size: 16px;
+
+      }
+    }
+  }
+  .laboratory-studies {
+    padding: 30px 20px 20px;
+    &>div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      width: 50%;
+    }
+    .laboratory-studies-item1,.laboratory-studies-item4 {
+      width: 50%;
+    }
+    .laboratory-studies-item2,.laboratory-studies-item5 {
+      width: 50%;
+    }
+    .laboratory-studies-item3,.laboratory-studies-item6 {
+      width: 50%;
+    }
+    .laboratory-studies-item2,.laboratory-studies-item4,.laboratory-studies-item6 {
+      justify-content: flex-end;
+      .laboratory-studies-right {
+        width: 92px;
+      }
+    }
+    .laboratory-studies-left {
+      padding-right: 5px;
+      img {
+        width: 50px;
+      }
+    }
+    .laboratory-studies-right {
+      p {
+        line-height: 1.2;
+        font-size: 12px;
+      }
+    }
+  }
+  .major-lists {
+    padding: 0 20px;
+    .major-items {
+      padding: 20px 0 10px;
+      .major-items-left {
+        padding-right: 10px;
+        line-height: 1.5;
+        &>p {
+          font-size: 16px;
+        }
+      }
+      .major-items-right {
+        width: 50px;
+      }
+    }
+  }
+  .laboratory-persons {
+    padding-bottom: 30px;
+    .common-titles {
+      font-size: 22px;
+    }
+    .laboratory-persons-list {
+      flex-wrap: wrap;
+      .laboratory-persons-item {
+        width: 49%;
+        .laboratory-persons-info {
+          background-color: $greenText;
+          padding: 24px 16px 16px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          color: #fff;
+          font-size: 18px;
+        }
       }
     }
   }

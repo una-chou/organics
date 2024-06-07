@@ -18,7 +18,7 @@
         <img src="@/assets/images/amazon.png" alt="">
         <p>Available on <br />Amazon.com</p>
       </div>
-      <div class="footer-sep"></div>
+      <div class="footer-sep footer-sep1"></div>
       <div class="footer-contact-right">
         <a href="https://x.com" target="_blank" style="height:38px"><img src="@/assets/images/footer/twitter.svg" alt=""></a>
         <a href="https://www.tiktok.com" target="_blank"><img src="@/assets/images/footer/tiktok.svg" alt=""></a>
@@ -26,18 +26,22 @@
         <a href="javascript:;" style="height:40px"><img src="@/assets/images/footer/photo.svg" alt=""></a>
       </div>
     </div>
-    <div class="footer-contact footer-contact-address">
+    <div class="footer-contact footer-contact-address footer-contact-address-pc">
       <div class="footer-contact-address-left">
         <p>Business<br />Address:</p>
       </div>
-      <!-- <div class="footer-contact-address-right"> -->
       <div class="footer-sep"></div>
       <div class="footer-address-info"><p>Headquarter<br />Mission Hill Foods Inc<br />17870 Castleton ST STE 302  <br />City of Industry CA 91748, USA</p></div>
       <div class="footer-sep"></div>
       <div class="footer-address-info"><p>Canada Office<br />Mission Hill Foods Co. Ltd.<br />202-15388 24 Ave Surrey <br />BC V4A2J2 CANADA</p></div>
       <div class="footer-sep"></div>
       <div class="footer-address-info" style="justify-content: flex-end;"><p>New York Office<br />CBD Calm Inc. <br />8321 3FL Broadway, Elmhurst, <br />NY 11373 USA</p></div>
-      <!-- </div> -->
+    </div>
+    <div class="footer-contact footer-contact-address footer-contact-address-m">
+      <div class="footer-address-title"><p>Business Address:</p></div>
+      <div class="footer-address-info"><p>Headquarter: Mission Hill Foods Inc <br />17870 Castleton ST STE 302   City of Industry CA 91748, USA</p></div>
+      <div class="footer-address-info"><p>Canada Office: Mission Hill Foods Co. Ltd. <br />202-15388 24 Ave Surrey  BC V4A2J2 CANADA</p></div>
+      <div class="footer-address-info"><p>New York Office: CBD Calm Inc.  <br />8321 3FL Broadway, Elmhurst,  NY 11373 USA</p></div>
     </div>
     <div class="footer-contact footer-contact-email">
       <div class="footer-email-info">
@@ -50,6 +54,12 @@
       </div>
     </div>
 
+    <div class="footer-icons">
+      <a href="https://x.com" target="_blank" style="height:18px"><img src="@/assets/images/footer/twitter.svg" alt=""></a>
+      <a href="https://www.tiktok.com" target="_blank"><img src="@/assets/images/footer/tiktok.svg" alt=""></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="@/assets/images/footer/facebook.svg" alt=""></a>
+      <a href="javascript:;" style="height:20px"><img src="@/assets/images/footer/photo.svg" alt=""></a>
+    </div>
     <div class="footer-copyright">Copyright © 2024 Mission Hill Foods. All Rights Reserved</div>
   </div>
 </template>
@@ -204,6 +214,12 @@ $greenText: #006633;
       background-color: rgba(255,255,255,.5);
     }
   }
+  .footer-contact-address-pc {
+    display: flex;
+  }
+  .footer-contact-address-m {
+    display: none;
+  }
   .footer-contact-email {
     display: flex;
     align-items: center;
@@ -225,6 +241,9 @@ $greenText: #006633;
     text-align: center;
     padding: 50px 0 40px;
     color: #fff;
+  }
+  .footer-icons {
+    display: none;
   }
 }
 
@@ -249,6 +268,138 @@ $greenText: #006633;
       a {
         height: 38px;
         margin-left: 10px;
+      }
+    }
+  }
+}
+}
+@media only screen and (max-width: 900px) {
+.part-footer {
+  padding: 0 20px;
+  margin-top: 30px;
+  .footer-tops {
+    height: 16px;
+    top: -15px;
+  }
+  .footer-navs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    p {
+      padding: 0 5px;
+      font-size: 11px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .footer-contact {
+    height: 80px;
+  }
+  .footer-contact-new {
+    padding: 20px 0;
+    font-size: 12px;
+    .footer-contact-left {
+      img {
+        height: 28px;
+        margin-right: 10px;
+        top: -1px;
+      }
+    }
+    .footer-contact-center {
+      justify-content: center;
+      img {
+        height: 22px;
+        margin-right: 10px;
+        position: relative;
+        top: 5px;
+      }
+    }
+    .footer-contact-right {
+      display: none;
+    }
+    .footer-sep {
+      height: 50px;
+    }
+    .footer-sep1 {
+      display: none;
+    }
+  }
+  .footer-contact-address {
+    padding: 10px 0 10px;
+    .footer-contact-address-left {
+      font-size: 10px;
+    }
+    .footer-address-info {
+      flex-shrink: 0;
+      font-size: 10px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .footer-sep {
+      display: none;
+    }
+  }
+  .footer-contact-address-pc {
+    display: none;
+  }
+  .footer-contact-address-m {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: max-content;
+    justify-content: center;
+    .footer-address-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      width: 100%;
+      text-align: center;
+    }
+    .footer-address-info {
+      margin-bottom: 5px;
+      width: 100%;
+      text-align: center;
+      line-height: 1.6;
+    }
+  }
+  .footer-contact-email {
+    padding: 20px 0;
+    font-size: 10px;
+    .footer-email-info {
+      flex: auto;
+      line-height: 1.3;
+    }
+    .footer-email {
+      height: 20px;
+      &>a {
+        height: 100%;
+        &>img {
+          height: 100%;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    text-align: center;
+    padding: 18px 0 20px;
+    color: #fff;
+    font-size: 12px;
+  }
+  .footer-icons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    a {
+      height: 20px;
+      margin-left: 20px;
+      img {
+        height: 100%;
+        margin: 0;
       }
     }
   }

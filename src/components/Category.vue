@@ -107,4 +107,40 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 900px) { 
+.category-tabs {
+  width: calc( 100% + 10px );
+  margin-left: -5px;
+  .category-tabs-item {
+    height: 60px;
+    width: 50%;
+    padding: 0 5px;
+    margin: 5px 0;
+    &>div {
+      font-size: 14px;
+    }
+  }
+  .full-category-item {
+    width: 100%;
+    &>div {
+      &::after {
+        width: 8px;
+        height: 8px;
+        margin: 0 0 2px 5px;
+        border-top: 1px solid $green;
+        border-right: 1px solid $green;
+      }
+      &:hover {
+        color: $green;
+        &::after {
+          border-top: 1px solid $green;
+          border-right: 1px solid $green;
+        }
+      }
+    }
+  }
+}
+
+}
 </style>
