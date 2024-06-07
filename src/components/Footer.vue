@@ -46,7 +46,8 @@
     <div class="footer-contact footer-contact-email">
       <div class="footer-email-info">
         <div>Welcome to contact us at: sales@misisonhillfoods.com</div>
-        <div>Connect with us on Instagram, X.com, and Facebook to stay updated on all our latest news and promotions!</div>
+        <div class="footer-email-info-pc">Connect with us on Instagram, X.com, and Facebook to stay updated on all our latest news and promotions!</div>
+        <div class="footer-email-info-m">Connect with us on Instagram, X.com, and Facebook to <br /> stay updated on all our latest news and promotions!</div>
         <div>Welcome to explore our products on Amazon and TikTok!</div>
       </div>
       <div class="footer-email">
@@ -231,6 +232,12 @@ $greenText: #006633;
     .footer-email-info {
       flex: auto;
       line-height: 1.5;
+      .footer-email-info-pc {
+        display: block;
+      }
+      .footer-email-info-m {
+        display: none;
+      }
     }
     .footer-email {
       height: 30px;
@@ -371,6 +378,12 @@ $greenText: #006633;
     .footer-email-info {
       flex: auto;
       line-height: 1.3;
+      .footer-email-info-pc {
+        display: none;
+      }
+      .footer-email-info-m {
+        display: block;
+      }
     }
     .footer-email {
       height: 20px;

@@ -188,6 +188,9 @@ export default {
   mounted() {
   },
   methods: {
+    jumpTo(name){
+      this.$router.push({name:name})
+    },
     gotoView(value) {
       if (this.$route.query && this.$route.query.unique && this.$route.query.unique==value) {
         return window.scrollTo(0,0)
@@ -566,6 +569,10 @@ export default {
         text-align: center;
         .el-image {
           height: 100%;
+          .el-image__inner {
+            height: 100%;
+            width: auto;
+          }
         }
         &>img {
           height: 100%;

@@ -79,7 +79,7 @@
             </div>
             <p class="sellers-titles">{{ item.name }}</p>
             <div class="sellers-descs">{{ item.desc }}</div>
-            <div class="sellers-btns">LEARN MORE</div>
+            <div class="sellers-btns" >LEARN MORE</div>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
         </div>
         <div class="introduce-wrap">
           <div class="introduce-wrap-left">
-            <div class="introduce-wrap-more">
+            <div class="introduce-wrap-more" @click="jumpTo('Manufacturing')">
               Learn more
             </div>
           </div>
@@ -142,7 +142,7 @@
         </div>
         <div class="introduce-wrap introduce-wrap-view">
           <div class="introduce-wrap-left">
-            <div class="introduce-wrap-more">
+            <div class="introduce-wrap-more" @click="jumpTo('Manufacturing')">
               Learn more
             </div>
           </div>
@@ -938,7 +938,7 @@ export default {
     display: none;
   }
   .part-swiper {
-    height: 500px;
+    height: 300px;
     .top-swiper {
       .top-swiper-text {
         bottom: 30px;
@@ -967,12 +967,12 @@ export default {
     .popular-lis {
       padding: 0 5px;
       width: 50%;
-      height: 180px;
+      height: 120px;
       margin-bottom: 10px;
     }
     .popular-items {
       &:hover {
-        pointer-events: none;
+        // pointer-events: none;
         .popular-wrap {
           transform: unset;
         }
@@ -990,7 +990,7 @@ export default {
         width: 100%;
       }
       .popular-title {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.3;
         left: 10px;
         bottom: 6px;
@@ -1001,9 +1001,9 @@ export default {
     }
     .whole-popular-lis {
       padding: 0 5px;
-      height: 180px;
+      height: 120px;
       .whole-popular-centers {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.4;
       }
     }
