@@ -109,7 +109,7 @@
         <div class="provide-fda">
           <div class="provide-fda-text">We can provide full service from raw materials to finished products with various packaging forms including bottling, box packaging and blistering.Our manufacturing procedure strictly follows the regulations and standards of US FDA and cGMP standards.</div>
           <div class="provide-fda-image">
-            <img src="@/assets/images/micon4.png" alt="">
+            <img class="provide-fda-image-left" src="@/assets/images/micon4.png" alt="">
             <img src="@/assets/images/micon5.png" alt="">
           </div>
         </div>
@@ -323,9 +323,13 @@ export default {
       align-items: center;
       img {
         width: 100px;
+        height: 100px;
         height: max-content;
         margin-left: 30px;
         flex-shrink: 0;
+      }
+      .provide-fda-image-left {
+        height: 40px;
       }
     }
   }
@@ -458,7 +462,7 @@ export default {
         z-index: 10;
         // border: 2px solid $greenText;
         // font-size: 26px;
-        // font-weight: 700;
+        // font-weight: bold;
         img {
           width: 100%;
           height: 100%;
@@ -610,7 +614,7 @@ export default {
           z-index: 10;
           // border: 2px solid $greenText;
           // font-size: 26px;
-          // font-weight: 700;
+          // font-weight: bold;
           img {
             width: 100%;
             height: 100%;
@@ -762,6 +766,7 @@ export default {
     border-radius: 12px;
     padding: 20px;
     flex-direction: column;
+    margin-bottom: 20px;
     .provide-fda-text {
       padding-right: 0px;
       font-size: 16px;
@@ -773,8 +778,13 @@ export default {
       margin-top: 20px;
       img {
         width: 60px;
+        height: 60px;
         margin-left: 0px;
         margin-right: 10px;
+      }
+      .provide-fda-image-left {
+        height: 24px;
+        margin-right: 20px;
       }
     }
   }

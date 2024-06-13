@@ -286,7 +286,8 @@ $greenText: #006633;
   margin-top: 30px;
   .footer-tops {
     height: 16px;
-    top: -15px;
+    top: -11px;
+    background-size: 26px auto;
   }
   .footer-navs {
     padding-top: 20px;
@@ -364,6 +365,7 @@ $greenText: #006633;
       margin-bottom: 5px;
       width: 100%;
       text-align: center;
+      margin-top: 5px;
     }
     .footer-address-info {
       margin-bottom: 5px;

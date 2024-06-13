@@ -704,7 +704,7 @@ export default {
             text-decoration: none;
             font-size: 20px;
             line-height: 24px;
-            font-weight: 1000;
+            font-weight: bolder;
             margin: 12px 0 8px 0;
             text-align: center;
             transition: all 0.3s ease;
@@ -732,7 +732,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
+            font-weight: bold;
             cursor: pointer;
             background: $green;
             transition: all 0.3s ease;
@@ -762,7 +762,7 @@ export default {
   .introduce-title {
     padding-top: 80px;
     font-size: 60px;
-    font-weight: 1000;
+    font-weight: bolder;
     text-align: center;
   }
   .introduce-subtitle {
@@ -861,7 +861,7 @@ export default {
     text-align: center;
     font-size: 50px;
     color: $greenText;
-    font-weight: 1000;
+    font-weight: bolder;
   }
   .manufacture-subtitle {
     margin-top: 20px;
@@ -938,16 +938,16 @@ export default {
     display: none;
   }
   .part-swiper {
-    height: 300px;
+    height: 250px;
     .top-swiper {
       .top-swiper-text {
-        bottom: 30px;
-        font-size: 20px;
+        bottom: 20px;
+        font-size: 16px;
       }
     }
     .el-carousel, .el-carousel__container {
       .el-carousel__indicator--horizontal {
-        padding: 12px 8px 8px;
+        padding: 12px 8px 6px 8px;
       }
       .el-carousel__indicator {
         .el-carousel__button {
@@ -956,8 +956,8 @@ export default {
         }
       }
       .el-carousel__indicator.is-active button {
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
       }
     }
   }

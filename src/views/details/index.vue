@@ -617,7 +617,7 @@ export default {
   .products-details-swiper-m {
     display: block;
     .products-details-swiper-content {
-      height: 280px;
+      height: 206px;
       overflow: hidden;
       text-align: center;
       position: relative;

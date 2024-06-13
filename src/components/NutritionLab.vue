@@ -69,7 +69,7 @@ export default {
         // justify-content: flex-end;
       }
       // &:hover {
-      //   // font-weight: 700;
+      //   // font-weight: bold;
       //   transform: scale(1.2);
       // }
     }
