@@ -20,10 +20,10 @@
       </div>
       <div class="footer-sep footer-sep1"></div>
       <div class="footer-contact-right">
-        <a href="https://x.com" target="_blank" style="height:38px"><img src="@/assets/images/footer/twitter.svg" alt=""></a>
+        <a href="https://x.com/MissionHillFood" target="_blank" style="height:38px"><img src="@/assets/images/footer/twitter.svg" alt=""></a>
         <a href="https://www.tiktok.com" target="_blank"><img src="@/assets/images/footer/tiktok.svg" alt=""></a>
-        <a href="https://www.facebook.com/" target="_blank"><img src="@/assets/images/footer/facebook.svg" alt=""></a>
-        <a href="javascript:;" style="height:40px"><img src="@/assets/images/footer/photo.svg" alt=""></a>
+        <a href="https://www.facebook.com/profile.php?id=61560898864102" target="_blank"><img src="@/assets/images/footer/facebook.svg" alt=""></a>
+        <a href="https://www.instagram.com/missionhillfoods?igsh=eXR4aHBteGp1eWs0&utm_source=qr" target="_blank" style="height:40px"><img src="@/assets/images/footer/photo.svg" alt=""></a>
       </div>
     </div>
     <div class="footer-contact footer-contact-address footer-contact-address-pc">
@@ -56,10 +56,10 @@
     </div>
 
     <div class="footer-icons">
-      <a href="https://x.com" target="_blank" style="height:18px"><img src="@/assets/images/footer/twitter.svg" alt=""></a>
+      <a href="https://x.com/MissionHillFood" target="_blank" style="height:18px"><img src="@/assets/images/footer/twitter.svg" alt=""></a>
       <a href="https://www.tiktok.com" target="_blank"><img src="@/assets/images/footer/tiktok.svg" alt=""></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="@/assets/images/footer/facebook.svg" alt=""></a>
-      <a href="javascript:;" style="height:20px"><img src="@/assets/images/footer/photo.svg" alt=""></a>
+      <a href="https://www.facebook.com/profile.php?id=61560898864102" target="_blank"><img src="@/assets/images/footer/facebook.svg" alt=""></a>
+      <a href="https://www.instagram.com/missionhillfoods?igsh=eXR4aHBteGp1eWs0&utm_source=qr" target="_blank" style="height:20px"><img src="@/assets/images/footer/photo.svg" alt=""></a>
     </div>
     <div class="footer-copyright">Copyright © 2024 Mission Hill Foods. All Rights Reserved</div>
   </div>
